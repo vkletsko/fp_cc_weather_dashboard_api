@@ -34,7 +34,7 @@ npm start
 Then open:
 
 ```
-http://localhost:3000/api/weather?city=Kyiv
+http://localhost/api/weather?city=Kyiv
 ```
 
 ### Docker
@@ -43,7 +43,7 @@ Build and run:
 
 ```bash
 docker build -t weather-api .
-docker run -p 3000:3000 --env-file .env weather-api
+docker run -p 80:80 --env-file .env weather-api
 ```
 
 ### Elastic Beanstalk (Single Container Docker)
