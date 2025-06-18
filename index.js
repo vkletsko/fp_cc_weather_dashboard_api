@@ -5,6 +5,10 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+app.get('/health', (req, res) => {
+  res.status(200).send('OK');
+});
+
 app.get('/api/weather', async (req, res) => {
   const { city } = req.query;
   if (!city) return res.status(400).json({ error: 'City is required' });
